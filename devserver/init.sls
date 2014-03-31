@@ -1,4 +1,4 @@
-{% for package in ['vim','git','mercurial','python','python-django','node','npm'] %}
+{% for package in ['vim','git','mercurial','python','python-django','node','npm','python-pip','python-ipdb'] %}
 {{ package }}:
   pkg:
     - installed
