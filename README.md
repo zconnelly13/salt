@@ -10,10 +10,16 @@ If you don't want to set up Salt you can go straight to [my dotfiles](https://gi
 
 ###Using this configuration as a base
 
-Grab the code
+Install git
 
 ```
 sudo apt-get install git
+```
+
+```
+Grab the code
+
+```
 cd /srv
 sudo mkdir salt
 cd salt
@@ -30,11 +36,21 @@ The next block is templatized and by default follows [Jinja2](http://jinja.pocoo
 
 The rest of the file is devoted to handling my dotfiles. You'll want to change `https://github.com/zconnelly13/dotfiles` to your dotfile repo as well as change other instances of `zconnelly13` to your preferred username
 
-####How to Run Everything
-You'll first need to [install the salt-minion](http://docs.saltstack.com/en/latest/topics/installation/index.html). This is the easiest way to run the code because you can run the salt-minion without setting up a master box.
+Now open up `bootstrap.sh` and again change "zconnelly13" to your preferred username
 
-Then run
+####How to Run Everything
+bootstrap.sh does the following...
+1. Creates your user and gives your user sudo permissions
+2. Adds the Salt ppa and calls apt-get update
+3. Installs the salt-minion
+4. Kicks off Salt to run locally
+
+It is tested for ubuntu 12.04+ so if you're on a different os you'll need to do this manually (but it shouldn't be too hard). See [Salt's Installation documentation](http://docs.saltstack.com/en/latest/topics/installation/).
+
+Otherwise simply run
+
 ```
-sudo salt-call --local state.highstate
+bash bootstrap.sh
 ```
+
 and watch the magic happen ^_^
