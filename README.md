@@ -13,10 +13,11 @@ If you don't want to set up Salt you can go straight to [my dotfiles](https://gi
 Grab the code
 
 ```
+sudo apt-get install git
 cd /srv
 sudo mkdir salt
 cd salt
-git clone https://github.com/zconnelly13/salt .
+sudo git clone https://github.com/zconnelly13/salt .
 ```
 
 ####What to Change
