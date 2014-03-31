@@ -38,18 +38,19 @@ The rest of the file is devoted to handling my dotfiles. You'll want to change `
 Now open up `bootstrap.sh` and again change "zconnelly13" to your preferred username
 
 ####How to Run Everything
-bootstrap.sh does the following...
-1. Creates your user and gives your user sudo permissions
-2. Adds the Salt ppa and calls apt-get update
-3. Installs the salt-minion
-4. Kicks off Salt to run locally
-
-It is tested for ubuntu 12.04+ so if you're on a different os you'll need to do this manually (but it shouldn't be too hard). See [Salt's Installation documentation](http://docs.saltstack.com/en/latest/topics/installation/).
-
-Otherwise simply run
 
 ```
 bash bootstrap.sh
 ```
 
 and watch the magic happen ^_^
+
+bootstrap.sh does the following...  
+1. Creates your user and gives your user sudo permissions  
+2. Adds the Salt ppa and calls apt-get update  
+3. Installs the salt-minion  
+4. Kicks off Salt to run locally  
+
+It is tested for ubuntu 12.04+ so if you're on a different os you'll need to do this manually (but it shouldn't be too hard). See [Salt's Installation documentation](http://docs.saltstack.com/en/latest/topics/installation/).
+
+
