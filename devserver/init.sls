@@ -15,6 +15,9 @@ https://github.com/gmarik/Vundle.vim:
     - rev: master
     - target: /home/zconnelly13/.vim/bundle/vundle
 
+sudo chown -R zconnelly13 /home/zconnelly13:
+  cmd.run
+
 vim +PluginInstall +qall:
   cmd.run:
     - user: zconnelly13
