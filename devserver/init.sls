@@ -17,6 +17,17 @@ https://github.com/gmarik/Vundle.vim:
 
 sudo chown -R zconnelly13 /home/zconnelly13:
   cmd.run
+ 
+virtualenvwrapper:
+  pip.installed:
+      - require:
+            - pkg: python-pip
+
+/home/zconnelly13/.virtualenvs:
+  file.directory:
+    - user: zconnelly13
+    - mode: 755
+    - makedirs: True
 
 vim +PluginInstall +qall:
   cmd.run:
