@@ -4,16 +4,15 @@
     - installed
 {% endfor %}
 
-https://github.com/zconnelly13/dotfiles:
+https://github.com/zconnelly13/.dotfiles:
   git.latest:
     - rev: master
-    - target: /home/zconnelly13/
+    - target: /home/zconnelly13/.dotfiles/
     - force: true
 
-https://github.com/gmarik/Vundle.vim:
-    git.latest:
-    - rev: master
-    - target: /home/zconnelly13/.vim/bundle/vundle
+bash /home/zconnelly13/.dotfiles/install.sh:
+  cmd.run:
+    - cwd: /home/zconnelly13/.dotfiles
 
 sudo chown -R zconnelly13 /home/zconnelly13:
   cmd.run
@@ -28,7 +27,3 @@ virtualenvwrapper:
     - user: zconnelly13
     - mode: 755
     - makedirs: True
-
-vim +PluginInstall +qall:
-  cmd.run:
-    - user: zconnelly13
